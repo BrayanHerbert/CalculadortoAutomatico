@@ -15,7 +15,7 @@ form.addEventListener('submit', function calcular(enviar){
     let calculoMetro = comprimento * largura
     let PrecoTotal = metro * calculoMetro
     let PrecoChapa = calculoMetro / 2.16
-    let PrecoFerragemParede = (comprimento * 2) + (largura * 2) / 3
+    let PrecoFerragemParede = (comprimento * 2 + largura  * 2) / 3
 
    
    
@@ -44,16 +44,16 @@ form.addEventListener('submit', function calcular(enviar){
 
     resultado.innerHTML += `<p>Preço total ficou: R$<strong>${parseFloat(PrecoTotal.toFixed(2))} </strong></p>`
 
-    resultado.innerHTML += `<p>Você usará um total de <strong>${PrecoChapa}</strong> chapas de drywall</p>`
+    resultado.innerHTML += `<p>Você usará um total de <strong>${PrecoChapa.toFixed(4)}</strong> chapas de drywall</p>`
     
-    resultado.innerHTML += `<p>Você usará um total de <strong>${PrecoFerragemParede} </strong>Tabica/Montantes ou afins</p>`
+    resultado.innerHTML += `<p>Você usará um total de <strong>${PrecoFerragemParede.toFixed(4)} </strong>Tabica/canaletas ou afins</p>`
 
     }
-
         let novaDiv = document.createElement("div")
         novaDiv.style.padding = "10px"
         
         let novoInput = document.createElement('input')
+
         novoInput.type = "text"
         novoInput.placeholder = "blzura?"
         novaDiv.appendChild(nov)
